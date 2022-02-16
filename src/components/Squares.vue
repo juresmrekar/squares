@@ -5,12 +5,10 @@
 					:key="index"
 					:square="square"
 			>
-			</square>			
+			</square>
 		</div>
 		<div class="info">
-			Number of squares: {{ squares.length }} <br>
-			Remaining viewport width: {{ remainingViewportWidth }} <br>
-			Remaining viewport height: {{ remainingViewportHeight }}
+			Number of squares: {{ squares.length }}
 		</div>
   </div>
 </template>
@@ -53,7 +51,7 @@ export default {
 				return;
 			}
 
-			// add square to squares collection 
+			// add square to squares collection
 			this.addSquare();
 
 			// calculate and set remaining viewport after square is added to collection

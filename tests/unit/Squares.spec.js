@@ -6,18 +6,18 @@ describe('Squares.vue', () => {
 		it('startCalculatingSquares method shoud be called when component is mounted', () => {
 			const startCalculatingSquaresSpy = jest.spyOn(Squares.methods, 'startCalculatingSquares');
 			const wrapper = shallowMount(Squares);
-	
+
 			expect(startCalculatingSquaresSpy).toHaveBeenCalled();
 			startCalculatingSquaresSpy.mockRestore();
 		})
-	
+
 		it('calculateSquare method shoud be called when component is mounted', () => {
 			const calculateSquareSpy = jest.spyOn(Squares.methods, 'calculateSquare');
 			shallowMount(Squares);
-	
+
 			expect(calculateSquareSpy).toHaveBeenCalled();
 			calculateSquareSpy.mockRestore();
-		})	
+		})
 	})
 
 	describe('UI', () => {
@@ -41,7 +41,7 @@ describe('Squares.vue', () => {
 				sideLength: 20
 			}]
 			const expectedSquaresCollectionLength = squares.length;
-	
+
 			const wrapper = shallowMount(Squares, {
 					data() {
 						return {
@@ -49,8 +49,8 @@ describe('Squares.vue', () => {
 						}
 					}
 				});
-	
+
 			expect(wrapper.find('.squares').element.childElementCount).toBe(expectedSquaresCollectionLength);
-		})	
+		})
 	})
 })

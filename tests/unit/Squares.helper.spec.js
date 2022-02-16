@@ -8,32 +8,32 @@ describe('Squares.helper.js', () => {
 			const sideLength = calculateSideLength({ viewportWidth, viewportHeight });
 			expect(sideLength).toBe(viewportWidth);
 		})
-	
+
 		it('should return viewportHeight if viewportWidth > viewportHeight', () => {
 			const viewportWidth = 300;
 			const viewportHeight = 200;
 			const sideLength = calculateSideLength({ viewportWidth, viewportHeight });
 			expect(sideLength).toBe(viewportHeight);
 		})
-	
+
 		it('should return viewportHeight if viewportWidth = viewportHeight', () => {
 			const viewportWidth = 200;
 			const viewportHeight = 200;
 			const sideLength = calculateSideLength({ viewportWidth, viewportHeight });
 			expect(sideLength).toBe(viewportHeight);
 		})
-	
+
 		it('should return 0 if viewportWidth parameter is missing', () => {
 			const viewportHeight = 200;
 			const sideLength = calculateSideLength({ viewportHeight }) ;
 			expect(sideLength).toBe(0);
 		})
-	
+
 		it('should return 0 if viewportHeight parameter is missing', () => {
 			const viewportWidth = 200;
 			const sideLength = calculateSideLength({ viewportWidth }) ;
 			expect(sideLength).toBe(0);
-		})	
+		})
 	})
 
 	describe('randomColor method', () => {

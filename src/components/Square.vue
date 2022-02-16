@@ -18,7 +18,7 @@ export default {
 				backgroundColor: `${this.square.backgroundColor}`,
 				height: `${this.square.sideLength}px`,
 				left: `${this.square.positionX}px`,
-				top: `${this.square.positionY}px`,				
+				top: `${this.square.positionY}px`,
 				width: `${this.square.sideLength}px`
 			}
 		}
